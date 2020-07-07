@@ -1,0 +1,29 @@
+LOCUS       Consensus         392 bp ds-DNA     linear       18-NOV-2019
+DEFINITION  .
+ACCESSION   
+VERSION     
+SOURCE      .
+    ORGANISM  .
+COMMENT     >Amplified_RND_1_product with primers
+COMMENT     
+COMMENT     ApEinfo:methylated:1
+FEATURES             Location/Qualifiers
+    ForPrimer        9..33
+                     /locus_tag="ForPrimer"
+                     /label="ForPrimer"
+    gene             9..384
+                     /locus_tag="gene"
+                     /label="gene"                 
+    RevPrimer        360..384
+                     /locus_tag="RevPrimer"
+                     /label="RevPrimer"
+
+ORIGIN
+        1 GACAAGGAAC TGTATCCTTT AACTTCCCTC AGATCACTCT TTGGCAACGA CCCCTCGTCA
+       61 CAATAAAGAT AGGGGGGCAA CTAAAGGAAG CTCTATTAGA TACAGGAGCA GATGATACAG
+      121 TATTAGAAGA AATGAGTTTG CCAGGAAGAT GGAAACCAAA AATGATAGGG GGAATTGGAG
+      181 GTTTTATCAA AGTAAGACAG TATGATCAGA TACTCATAGA AATCTGTGGA CATAAAGCTA
+      241 TAGGTACAGT ATTAGTAGGA CCTACACCTG TCAACATAAT TGGAAGAAAT CTGTTGACTC
+      301 AGATTGGTTG CACTTTAAAT TTTCCCATTA GTCCTATTGA AACTGTACCA GATTAGTCCT
+      361 ATTGAAACTG TACCAG  
+//
