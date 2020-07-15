@@ -1,4 +1,5 @@
 #!/bin/bash
+pip install nbconvert
 
 RESULTSDIR="results"
 NB="analysis_notebook.ipynb"
