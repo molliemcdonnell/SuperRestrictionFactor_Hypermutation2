@@ -1,0 +1,102 @@
+2021-06-11 09:28:15,136 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /Users/jamesdargan/DS/Mollie/Final_SRF_WIP
+
+2021-06-11 09:28:15,139 - INFO - Progress is being logged to ./exp1_results/codoncounts/summary.log
+2021-06-11 09:28:15,168 - INFO - Version information:
+	Time and date: Fri Jun 11 09:28:15 2021
+	Platform: Darwin-20.3.0-x86_64-i386-64bit
+	Python version: 3.7.6 (default, Jan  8 2020, 13:42:34)  [Clang 4.0.1 (tags/RELEASE_401/final)]
+	dms_tools2 version: 2.6.6
+	Bio version: 1.77
+	pandas version: 0.25.3
+	numpy version: 1.18.2
+	IPython version: 7.19.0
+	jupyter version unknown
+	matplotlib version: 3.2.2
+	plotnine version: 0.7.0
+	natsort version: 7.0.1
+	pystan version: 2.19.1.1
+	scipy version: 1.4.1
+	seaborn version: 0.11.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.77
+	umi_tools version: 1.0.1
+
+2021-06-11 09:28:15,168 - INFO - Parsed the following arguments:
+	outdir = ./exp1_results/codoncounts
+	ncpus = 1
+	use_existing = no
+	refseq = ./data/Bru_Pol.fasta
+	alignspecs = ['205,504,35,34']
+	bclen = 8
+	fastqdir = ./exp1_results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 33
+	minq = 17
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = ./data/sitemask.csv
+	purgeread = 0
+	purgebc = 0
+	bcinfo = True
+	bcinfo_csv = True
+	batchfile = ./exp1_results/codoncounts/batch.csv
+	summaryprefix = summary
+
+2021-06-11 09:28:15,168 - INFO - Parsing sample info from ./exp1_results/codoncounts/batch.csv
+2021-06-11 09:28:15,177 - INFO - Read the following sample information:
+name,R1
+PlasmidCtrl,PlasmidCtrl_S1_L001_R1_001.fastq.gz
+NoA3,NoA3_S2_L001_R1_001.fastq.gz
+A3G,A3G_S3_L001_R1_001.fastq.gz
+A3C,A3C_S4_L001_R1_001.fastq.gz
+A3C-I188,A3C-I188_S5_L001_R1_001.fastq.gz
+A3H-hapI,A3H-hapI_S6_L001_R1_001.fastq.gz
+A3H-hapII,A3H-hapII-A3C_S10_L001_R1_001.fastq.gz
+A3C-A3C,A3C-A3C_S8_L001_R1_001.fastq.gz
+A3C-A3H-hapII,A3C-A3H-hapII_S9_L001_R1_001.fastq.gz
+A3H-hapII-A3C,A3H-hapII-A3C_S6_L001_R1_001.fastq.gz
+A3C-I188-A3H-hapII,A3C-I188-A3H-hapII_S11_L001_R1_001.fastq.gz
+A3H-hapII-A3C-I188,A3H-hapII-A3C-I188_S12_L001_R1_001.fastq.gz
+
+
+2021-06-11 09:28:21,011 - INFO - Running dms2_bcsubamp on all samples using 1 CPUs...
+2021-06-11 09:44:59,500 - INFO - Completed runs of dms2_bcsubamp.
+
+2021-06-11 09:44:59,507 - ERROR - Terminating dms2_batch_bcsubamp with ERROR
+Traceback (most recent call last):
+  File "/opt/anaconda3/bin/dms2_batch_bcsubamp", line 152, in main
+    '\n'.join(logfiles.values)))
+AssertionError: Did not create all these files:
+./exp1_results/codoncounts/PlasmidCtrl_codoncounts.csv
+./exp1_results/codoncounts/NoA3_codoncounts.csv
+./exp1_results/codoncounts/A3G_codoncounts.csv
+./exp1_results/codoncounts/A3C_codoncounts.csv
+./exp1_results/codoncounts/A3C-I188_codoncounts.csv
+./exp1_results/codoncounts/A3H-hapI_codoncounts.csv
+./exp1_results/codoncounts/A3H-hapII_codoncounts.csv
+./exp1_results/codoncounts/A3C-A3C_codoncounts.csv
+./exp1_results/codoncounts/A3C-A3H-hapII_codoncounts.csv
+./exp1_results/codoncounts/A3H-hapII-A3C_codoncounts.csv
+./exp1_results/codoncounts/A3C-I188-A3H-hapII_codoncounts.csv
+./exp1_results/codoncounts/A3H-hapII-A3C-I188_codoncounts.csv
+
+Look in following log files for details of what went wrong:
+./exp1_results/codoncounts/PlasmidCtrl.log
+./exp1_results/codoncounts/NoA3.log
+./exp1_results/codoncounts/A3G.log
+./exp1_results/codoncounts/A3C.log
+./exp1_results/codoncounts/A3C-I188.log
+./exp1_results/codoncounts/A3H-hapI.log
+./exp1_results/codoncounts/A3H-hapII.log
+./exp1_results/codoncounts/A3C-A3C.log
+./exp1_results/codoncounts/A3C-A3H-hapII.log
+./exp1_results/codoncounts/A3H-hapII-A3C.log
+./exp1_results/codoncounts/A3C-I188-A3H-hapII.log
+./exp1_results/codoncounts/A3H-hapII-A3C-I188.log

@@ -1,0 +1,62 @@
+2021-03-28 17:01:13,229 - INFO - Beginning execution of dms2_bcsubamp in directory /Users/jamesdargan/DS/Mollie/Final_SRF_WIP
+
+2021-03-28 17:01:13,229 - INFO - Progress is being logged to ./exp2_results/codoncounts/NoA3-1.log
+2021-03-28 17:01:13,248 - INFO - Version information:
+	Time and date: Sun Mar 28 17:01:13 2021
+	Platform: Darwin-20.3.0-x86_64-i386-64bit
+	Python version: 3.7.6 (default, Jan  8 2020, 13:42:34)  [Clang 4.0.1 (tags/RELEASE_401/final)]
+	dms_tools2 version: 2.6.6
+	Bio version: 1.77
+	pandas version: 0.25.3
+	numpy version: 1.18.2
+	IPython version: 7.19.0
+	jupyter version unknown
+	matplotlib version: 3.2.2
+	plotnine version: 0.7.0
+	natsort version: 7.0.1
+	pystan version: 2.19.1.1
+	scipy version: 1.4.1
+	seaborn version: 0.11.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.77
+	umi_tools version: 1.0.1
+
+2021-03-28 17:01:13,249 - INFO - Parsed the following arguments:
+	outdir = ./exp2_results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/Bru_Pol.fasta
+	alignspecs = ['205,504,35,34']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 33
+	minq = 17
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = ./data/sitemask.csv
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = NoA3-1
+	R1 = ['NoA3-1_R1.fastq.gz']
+
+2021-03-28 17:01:13,249 - INFO - Removing existing file ./exp2_results/codoncounts/NoA3-1_codoncounts.csv
+2021-03-28 17:01:13,254 - INFO - Removing existing file ./exp2_results/codoncounts/NoA3-1_readstats.csv
+2021-03-28 17:01:13,254 - INFO - Removing existing file ./exp2_results/codoncounts/NoA3-1_readsperbc.csv
+2021-03-28 17:01:13,255 - INFO - Removing existing file ./exp2_results/codoncounts/NoA3-1_bcstats.csv
+2021-03-28 17:01:13,255 - INFO - Removing existing file ./exp2_results/codoncounts/NoA3-1_bcinfo.csv.gz
+2021-03-28 17:01:13,266 - INFO - Read refseq of 3048 codons from ./data/Bru_Pol.fasta
+2021-03-28 17:01:13,267 - ERROR - Terminating dms2_bcsubamp with ERROR
+Traceback (most recent call last):
+  File "/opt/anaconda3/bin/dms2_bcsubamp", line 189, in main
+    assert os.path.isdir(args['fastqdir']), "Invalid --fastqdir"
+AssertionError: Invalid --fastqdir

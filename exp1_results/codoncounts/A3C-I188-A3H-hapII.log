@@ -1,0 +1,103 @@
+2021-06-11 09:41:51,249 - INFO - Beginning execution of dms2_bcsubamp in directory /Users/jamesdargan/DS/Mollie/Final_SRF_WIP
+
+2021-06-11 09:41:51,249 - INFO - Progress is being logged to ./exp1_results/codoncounts/A3C-I188-A3H-hapII.log
+2021-06-11 09:41:51,271 - INFO - Version information:
+	Time and date: Fri Jun 11 09:41:51 2021
+	Platform: Darwin-20.3.0-x86_64-i386-64bit
+	Python version: 3.7.6 (default, Jan  8 2020, 13:42:34)  [Clang 4.0.1 (tags/RELEASE_401/final)]
+	dms_tools2 version: 2.6.6
+	Bio version: 1.77
+	pandas version: 0.25.3
+	numpy version: 1.18.2
+	IPython version: 7.19.0
+	jupyter version unknown
+	matplotlib version: 3.2.2
+	plotnine version: 0.7.0
+	natsort version: 7.0.1
+	pystan version: 2.19.1.1
+	scipy version: 1.4.1
+	seaborn version: 0.11.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.77
+	umi_tools version: 1.0.1
+
+2021-06-11 09:41:51,271 - INFO - Parsed the following arguments:
+	outdir = ./exp1_results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/Bru_Pol.fasta
+	alignspecs = ['205,504,35,34']
+	bclen = 8
+	fastqdir = ./exp1_results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 33
+	minq = 17
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = ./data/sitemask.csv
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = A3C-I188-A3H-hapII
+	R1 = ['A3C-I188-A3H-hapII_S11_L001_R1_001.fastq.gz']
+
+2021-06-11 09:41:51,272 - INFO - Removing existing file ./exp1_results/codoncounts/A3C-I188-A3H-hapII_codoncounts.csv
+2021-06-11 09:41:51,272 - INFO - Removing existing file ./exp1_results/codoncounts/A3C-I188-A3H-hapII_readstats.csv
+2021-06-11 09:41:51,272 - INFO - Removing existing file ./exp1_results/codoncounts/A3C-I188-A3H-hapII_readsperbc.csv
+2021-06-11 09:41:51,272 - INFO - Removing existing file ./exp1_results/codoncounts/A3C-I188-A3H-hapII_bcstats.csv
+2021-06-11 09:41:51,272 - INFO - Removing existing file ./exp1_results/codoncounts/A3C-I188-A3H-hapII_bcinfo.csv.gz
+2021-06-11 09:41:51,286 - INFO - Read refseq of 3048 codons from ./data/Bru_Pol.fasta
+2021-06-11 09:41:51,288 - INFO - Reads are in these FASTQ pairs:
+	./exp1_results/FASTQ_files/A3C-I188-A3H-hapII_S11_L001_R1_001.fastq.gz and ./exp1_results/FASTQ_files/A3C-I188-A3H-hapII_S11_L001_R2_001.fastq.gz
+
+2021-06-11 09:41:51,288 - INFO - Now parsing read pairs...
+2021-06-11 09:42:02,318 - INFO - Reads parsed so far: 500000
+2021-06-11 09:42:13,317 - INFO - Reads parsed so far: 1000000
+2021-06-11 09:42:22,870 - INFO - Reads parsed so far: 1500000
+2021-06-11 09:42:28,468 - INFO - Parsed 1817533 reads, found 815491 unique barcodes.
+2021-06-11 09:42:28,474 - INFO - Summary stats on reads:
+   total  fail filter  low Q barcode
+ 1817533            0         130054
+2021-06-11 09:42:28,475 - INFO - Writing these stats to ./exp1_results/codoncounts/A3C-I188-A3H-hapII_readstats.csv
+
+2021-06-11 09:42:28,875 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                            364187
+2                            204873
+3                            134509
+4                             69171
+5                             28656
+6                             10009
+7                              3046
+8                               799
+9                               193
+10                               37
+11                                7
+12                                3
+67                                1
+2021-06-11 09:42:28,875 - INFO - Writing these stats to ./exp1_results/codoncounts/A3C-I188-A3H-hapII_readsperbc.csv
+
+2021-06-11 09:42:28,877 - INFO - Examining the 815491 barcodes to build and align subamplicons...
+2021-06-11 09:42:46,974 - INFO - Barcodes examined so far: 200000
+2021-06-11 09:43:03,437 - INFO - Barcodes examined so far: 400000
+2021-06-11 09:43:16,993 - INFO - Barcodes examined so far: 600000
+2021-06-11 09:43:25,604 - INFO - Barcodes examined so far: 800000
+2021-06-11 09:43:25,895 - INFO - Examined all barcodes. Summary stats:
+  total  too few reads  not alignable  aligned
+ 815491         364187          25278   426026
+2021-06-11 09:43:25,895 - INFO - Writing these stats to ./exp1_results/codoncounts/A3C-I188-A3H-hapII_bcstats.csv
+
+2021-06-11 09:43:25,929 - INFO - Filtering to only sites listed in sitemask ./data/sitemask.csv
+2021-06-11 09:43:26,236 - INFO - Filtered from 1016 to 101 sites.
+2021-06-11 09:43:26,236 - INFO - Writing the counts of each codon identity at each site to ./exp1_results/codoncounts/A3C-I188-A3H-hapII_codoncounts.csv
+
+2021-06-11 09:43:26,258 - INFO - Successful completion of dms2_bcsubamp

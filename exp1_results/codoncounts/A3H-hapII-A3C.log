@@ -1,0 +1,57 @@
+2021-06-11 09:41:46,338 - INFO - Beginning execution of dms2_bcsubamp in directory /Users/jamesdargan/DS/Mollie/Final_SRF_WIP
+
+2021-06-11 09:41:46,338 - INFO - Progress is being logged to ./exp1_results/codoncounts/A3H-hapII-A3C.log
+2021-06-11 09:41:46,355 - INFO - Version information:
+	Time and date: Fri Jun 11 09:41:46 2021
+	Platform: Darwin-20.3.0-x86_64-i386-64bit
+	Python version: 3.7.6 (default, Jan  8 2020, 13:42:34)  [Clang 4.0.1 (tags/RELEASE_401/final)]
+	dms_tools2 version: 2.6.6
+	Bio version: 1.77
+	pandas version: 0.25.3
+	numpy version: 1.18.2
+	IPython version: 7.19.0
+	jupyter version unknown
+	matplotlib version: 3.2.2
+	plotnine version: 0.7.0
+	natsort version: 7.0.1
+	pystan version: 2.19.1.1
+	scipy version: 1.4.1
+	seaborn version: 0.11.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.77
+	umi_tools version: 1.0.1
+
+2021-06-11 09:41:46,355 - INFO - Parsed the following arguments:
+	outdir = ./exp1_results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/Bru_Pol.fasta
+	alignspecs = ['205,504,35,34']
+	bclen = 8
+	fastqdir = ./exp1_results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 33
+	minq = 17
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = ./data/sitemask.csv
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = A3H-hapII-A3C
+	R1 = ['A3H-hapII-A3C_S6_L001_R1_001.fastq.gz']
+
+2021-06-11 09:41:46,367 - INFO - Read refseq of 3048 codons from ./data/Bru_Pol.fasta
+2021-06-11 09:41:46,367 - ERROR - Terminating dms2_bcsubamp with ERROR
+Traceback (most recent call last):
+  File "/opt/anaconda3/bin/dms2_bcsubamp", line 193, in main
+    assert r1files and all(map(os.path.isfile, r1files)), "Missing R1 files"
+AssertionError: Missing R1 files

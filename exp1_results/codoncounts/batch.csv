@@ -1,0 +1,13 @@
+name,R1
+PlasmidCtrl,PlasmidCtrl_S1_L001_R1_001.fastq.gz
+NoA3,NoA3_S2_L001_R1_001.fastq.gz
+A3G,A3G_S3_L001_R1_001.fastq.gz
+A3C,A3C_S4_L001_R1_001.fastq.gz
+A3C-I188,A3C-I188_S5_L001_R1_001.fastq.gz
+A3H-hapI,A3H-hapI_S6_L001_R1_001.fastq.gz
+A3H-hapII,A3H-hapII-A3C_S10_L001_R1_001.fastq.gz
+A3C-A3C,A3C-A3C_S8_L001_R1_001.fastq.gz
+A3C-A3H-hapII,A3C-A3H-hapII_S9_L001_R1_001.fastq.gz
+A3H-hapII-A3C,A3H-hapII-A3C_S6_L001_R1_001.fastq.gz
+A3C-I188-A3H-hapII,A3C-I188-A3H-hapII_S11_L001_R1_001.fastq.gz
+A3H-hapII-A3C-I188,A3H-hapII-A3C-I188_S12_L001_R1_001.fastq.gz

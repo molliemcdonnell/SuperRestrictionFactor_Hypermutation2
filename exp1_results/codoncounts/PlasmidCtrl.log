@@ -1,0 +1,103 @@
+2021-06-11 09:28:25,574 - INFO - Beginning execution of dms2_bcsubamp in directory /Users/jamesdargan/DS/Mollie/Final_SRF_WIP
+
+2021-06-11 09:28:25,576 - INFO - Progress is being logged to ./exp1_results/codoncounts/PlasmidCtrl.log
+2021-06-11 09:28:25,590 - INFO - Version information:
+	Time and date: Fri Jun 11 09:28:25 2021
+	Platform: Darwin-20.3.0-x86_64-i386-64bit
+	Python version: 3.7.6 (default, Jan  8 2020, 13:42:34)  [Clang 4.0.1 (tags/RELEASE_401/final)]
+	dms_tools2 version: 2.6.6
+	Bio version: 1.77
+	pandas version: 0.25.3
+	numpy version: 1.18.2
+	IPython version: 7.19.0
+	jupyter version unknown
+	matplotlib version: 3.2.2
+	plotnine version: 0.7.0
+	natsort version: 7.0.1
+	pystan version: 2.19.1.1
+	scipy version: 1.4.1
+	seaborn version: 0.11.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.77
+	umi_tools version: 1.0.1
+
+2021-06-11 09:28:25,591 - INFO - Parsed the following arguments:
+	outdir = ./exp1_results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/Bru_Pol.fasta
+	alignspecs = ['205,504,35,34']
+	bclen = 8
+	fastqdir = ./exp1_results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 33
+	minq = 17
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = ./data/sitemask.csv
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = PlasmidCtrl
+	R1 = ['PlasmidCtrl_S1_L001_R1_001.fastq.gz']
+
+2021-06-11 09:28:25,591 - INFO - Removing existing file ./exp1_results/codoncounts/PlasmidCtrl_codoncounts.csv
+2021-06-11 09:28:25,591 - INFO - Removing existing file ./exp1_results/codoncounts/PlasmidCtrl_readstats.csv
+2021-06-11 09:28:25,591 - INFO - Removing existing file ./exp1_results/codoncounts/PlasmidCtrl_readsperbc.csv
+2021-06-11 09:28:25,592 - INFO - Removing existing file ./exp1_results/codoncounts/PlasmidCtrl_bcstats.csv
+2021-06-11 09:28:25,592 - INFO - Removing existing file ./exp1_results/codoncounts/PlasmidCtrl_bcinfo.csv.gz
+2021-06-11 09:28:25,668 - INFO - Read refseq of 3048 codons from ./data/Bru_Pol.fasta
+2021-06-11 09:28:25,668 - INFO - Reads are in these FASTQ pairs:
+	./exp1_results/FASTQ_files/PlasmidCtrl_S1_L001_R1_001.fastq.gz and ./exp1_results/FASTQ_files/PlasmidCtrl_S1_L001_R2_001.fastq.gz
+
+2021-06-11 09:28:25,669 - INFO - Now parsing read pairs...
+2021-06-11 09:28:37,353 - INFO - Reads parsed so far: 500000
+2021-06-11 09:28:47,722 - INFO - Reads parsed so far: 1000000
+2021-06-11 09:28:56,839 - INFO - Reads parsed so far: 1500000
+2021-06-11 09:29:03,102 - INFO - Parsed 1776447 reads, found 777764 unique barcodes.
+2021-06-11 09:29:03,105 - INFO - Summary stats on reads:
+   total  fail filter  low Q barcode
+ 1776447            0         123987
+2021-06-11 09:29:03,106 - INFO - Writing these stats to ./exp1_results/codoncounts/PlasmidCtrl_readstats.csv
+
+2021-06-11 09:29:03,465 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                            325527
+2                            203995
+3                            136091
+4                             69557
+5                             28554
+6                              9979
+7                              3027
+8                               781
+9                               198
+10                               43
+11                                8
+12                                2
+13                                1
+24                                1
+2021-06-11 09:29:03,465 - INFO - Writing these stats to ./exp1_results/codoncounts/PlasmidCtrl_readsperbc.csv
+
+2021-06-11 09:29:03,466 - INFO - Examining the 777764 barcodes to build and align subamplicons...
+2021-06-11 09:29:20,279 - INFO - Barcodes examined so far: 200000
+2021-06-11 09:29:36,266 - INFO - Barcodes examined so far: 400000
+2021-06-11 09:29:48,455 - INFO - Barcodes examined so far: 600000
+2021-06-11 09:29:55,276 - INFO - Examined all barcodes. Summary stats:
+  total  too few reads  not alignable  aligned
+ 777764         325527          19919   432318
+2021-06-11 09:29:55,276 - INFO - Writing these stats to ./exp1_results/codoncounts/PlasmidCtrl_bcstats.csv
+
+2021-06-11 09:29:55,302 - INFO - Filtering to only sites listed in sitemask ./data/sitemask.csv
+2021-06-11 09:29:55,500 - INFO - Filtered from 1016 to 101 sites.
+2021-06-11 09:29:55,501 - INFO - Writing the counts of each codon identity at each site to ./exp1_results/codoncounts/PlasmidCtrl_codoncounts.csv
+
+2021-06-11 09:29:55,510 - INFO - Successful completion of dms2_bcsubamp

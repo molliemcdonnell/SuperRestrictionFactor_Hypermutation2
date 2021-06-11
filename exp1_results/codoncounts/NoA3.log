@@ -1,0 +1,105 @@
+2021-06-11 09:30:01,125 - INFO - Beginning execution of dms2_bcsubamp in directory /Users/jamesdargan/DS/Mollie/Final_SRF_WIP
+
+2021-06-11 09:30:01,125 - INFO - Progress is being logged to ./exp1_results/codoncounts/NoA3.log
+2021-06-11 09:30:01,140 - INFO - Version information:
+	Time and date: Fri Jun 11 09:30:01 2021
+	Platform: Darwin-20.3.0-x86_64-i386-64bit
+	Python version: 3.7.6 (default, Jan  8 2020, 13:42:34)  [Clang 4.0.1 (tags/RELEASE_401/final)]
+	dms_tools2 version: 2.6.6
+	Bio version: 1.77
+	pandas version: 0.25.3
+	numpy version: 1.18.2
+	IPython version: 7.19.0
+	jupyter version unknown
+	matplotlib version: 3.2.2
+	plotnine version: 0.7.0
+	natsort version: 7.0.1
+	pystan version: 2.19.1.1
+	scipy version: 1.4.1
+	seaborn version: 0.11.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.77
+	umi_tools version: 1.0.1
+
+2021-06-11 09:30:01,140 - INFO - Parsed the following arguments:
+	outdir = ./exp1_results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/Bru_Pol.fasta
+	alignspecs = ['205,504,35,34']
+	bclen = 8
+	fastqdir = ./exp1_results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 33
+	minq = 17
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = ./data/sitemask.csv
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = NoA3
+	R1 = ['NoA3_S2_L001_R1_001.fastq.gz']
+
+2021-06-11 09:30:01,141 - INFO - Removing existing file ./exp1_results/codoncounts/NoA3_codoncounts.csv
+2021-06-11 09:30:01,141 - INFO - Removing existing file ./exp1_results/codoncounts/NoA3_readstats.csv
+2021-06-11 09:30:01,141 - INFO - Removing existing file ./exp1_results/codoncounts/NoA3_readsperbc.csv
+2021-06-11 09:30:01,142 - INFO - Removing existing file ./exp1_results/codoncounts/NoA3_bcstats.csv
+2021-06-11 09:30:01,142 - INFO - Removing existing file ./exp1_results/codoncounts/NoA3_bcinfo.csv.gz
+2021-06-11 09:30:01,207 - INFO - Read refseq of 3048 codons from ./data/Bru_Pol.fasta
+2021-06-11 09:30:01,207 - INFO - Reads are in these FASTQ pairs:
+	./exp1_results/FASTQ_files/NoA3_S2_L001_R1_001.fastq.gz and ./exp1_results/FASTQ_files/NoA3_S2_L001_R2_001.fastq.gz
+
+2021-06-11 09:30:01,208 - INFO - Now parsing read pairs...
+2021-06-11 09:30:11,827 - INFO - Reads parsed so far: 500000
+2021-06-11 09:30:22,584 - INFO - Reads parsed so far: 1000000
+2021-06-11 09:30:32,763 - INFO - Reads parsed so far: 1500000
+2021-06-11 09:30:44,088 - INFO - Reads parsed so far: 2000000
+2021-06-11 09:30:48,980 - INFO - Parsed 2199813 reads, found 850973 unique barcodes.
+2021-06-11 09:30:48,984 - INFO - Summary stats on reads:
+   total  fail filter  low Q barcode
+ 2199813            0         163483
+2021-06-11 09:30:48,985 - INFO - Writing these stats to ./exp1_results/codoncounts/NoA3_readstats.csv
+
+2021-06-11 09:30:49,417 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                            312420
+2                            199181
+3                            159619
+4                             98936
+5                             49466
+6                             20574
+7                              7351
+8                              2493
+9                               696
+10                              172
+11                               45
+12                               16
+13                                3
+62                                1
+2021-06-11 09:30:49,417 - INFO - Writing these stats to ./exp1_results/codoncounts/NoA3_readsperbc.csv
+
+2021-06-11 09:30:49,418 - INFO - Examining the 850973 barcodes to build and align subamplicons...
+2021-06-11 09:31:06,473 - INFO - Barcodes examined so far: 200000
+2021-06-11 09:31:22,951 - INFO - Barcodes examined so far: 400000
+2021-06-11 09:31:38,464 - INFO - Barcodes examined so far: 600000
+2021-06-11 09:31:49,400 - INFO - Barcodes examined so far: 800000
+2021-06-11 09:31:50,490 - INFO - Examined all barcodes. Summary stats:
+  total  too few reads  not alignable  aligned
+ 850973         312420          22064   516489
+2021-06-11 09:31:50,490 - INFO - Writing these stats to ./exp1_results/codoncounts/NoA3_bcstats.csv
+
+2021-06-11 09:31:50,514 - INFO - Filtering to only sites listed in sitemask ./data/sitemask.csv
+2021-06-11 09:31:50,734 - INFO - Filtered from 1016 to 101 sites.
+2021-06-11 09:31:50,734 - INFO - Writing the counts of each codon identity at each site to ./exp1_results/codoncounts/NoA3_codoncounts.csv
+
+2021-06-11 09:31:50,744 - INFO - Successful completion of dms2_bcsubamp
